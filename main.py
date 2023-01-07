@@ -6,7 +6,7 @@ bot = telebot.TeleBot('5666666953:AAGBG3UMXs6SvPVGx4bwhTRgEU9I3qE0zck')
 
 @bot.message_handler(commands=['start'])
 def start(message):
-    bot.send_message(message.chat.id, "Good day! How can I assist you?\n\n/checkpointsCamera for live snapshots of Woodlands/Tuas Checkpoint\n\n/roadworks for live updates on SG road incidents")
+    bot.send_message(message.chat.id, "Good day! How can I assist you?\n\n/checkpointsCamera for live snapshots of Woodlands/Tuas Checkpoint\n\n/roadworks for live updates on SG road incidents near Woodlands/Tuas Checkpoint")
 
 
 @bot.message_handler(commands=['checkpointsCamera'])
