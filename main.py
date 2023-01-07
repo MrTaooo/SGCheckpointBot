@@ -95,8 +95,21 @@ def sendRoadwork(dataTypeArr, messageArr, message):
         for x in range(len(dataTypeArr)):
             dataType = dataTypeArr[x]
             roadMessage = messageArr[x]
-            bot.send_message(message.chat.id,f"Type: {dataType}\n{roadMessage}\n\n")
+
+            splitted_roadMessage = roadMessage.split(":")
+            first_half = splitted_roadMessage[0]
+            second_half = splitted_roadMessage[1]
+            
+            first_half_split = first_half.split(")")
+            
+            date = first_half_split[0][1:]
+            time =  first_half_split[1]+":"+second_half[0:2]
+            roadMessage = second_half[2::]
+            
+
+            bot.send_message(message.chat.id,f"Type: {dataType}\nDate: {date}\nTime: {time}\nMessage: {roadMessage}\n\n")
     else:
-        bot.send_message(message.chat.id,"It seems like there's no road incident")
+        bot.send_message(message.chat.id,"It seems like there's no road incident near Woodlands/Tuas Checkpoint")
+    
 
 bot.polling()
