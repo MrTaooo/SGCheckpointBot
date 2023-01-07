@@ -98,6 +98,4 @@ def sendRoadwork(dataTypeArr, messageArr, message):
             bot.send_message(message.chat.id,f"Type: {dataType}\n{roadMessage}\n\n")
     else:
         bot.send_message(message.chat.id,"It seems like there's no road incident")
-    
 
-bot.polling()
