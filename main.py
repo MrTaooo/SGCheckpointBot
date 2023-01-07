@@ -99,3 +99,4 @@ def sendRoadwork(dataTypeArr, messageArr, message):
     else:
         bot.send_message(message.chat.id,"It seems like there's no road incident")
 
+bot.polling()
