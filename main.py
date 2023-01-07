@@ -2,7 +2,7 @@ import telebot
 import requests
 from datetime import datetime
 
-bot = telebot.TeleBot('5895899031:AAGMv_wzv7pKLJqacQYUiS27rSPzO7QumNI')
+bot = telebot.TeleBot('5666666953:AAGBG3UMXs6SvPVGx4bwhTRgEU9I3qE0zck')
 
 @bot.message_handler(commands=['start'])
 def start(message):
