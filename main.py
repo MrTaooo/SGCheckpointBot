@@ -2,7 +2,7 @@ import telebot
 import requests
 from datetime import datetime
 
-bot = telebot.TeleBot('5666666953:AAGBG3UMXs6SvPVGx4bwhTRgEU9I3qE0zck')
+bot = telebot.TeleBot('.....EnterYourTelegramBotID.....')
 
 @bot.message_handler(commands=['start'])
 def start(message):
@@ -11,7 +11,7 @@ def start(message):
 
 @bot.message_handler(commands=['checkpointsCamera'])
 def checkpointsCamera(message):
-    headers = {"AccountKey": "p34dHcCaTsmmlz4DPlzUGw=="}
+    headers = {"AccountKey": ".....EnterYourTelegramAccKey....."}
     response = requests.get(
         'http://datamall2.mytransport.sg/ltaodataservice/Traffic-Imagesv2', headers=headers)
     data = response.json()['value']
@@ -75,7 +75,7 @@ def sendImage(sendingArr, sendingLocation, message):
 
 @bot.message_handler(commands=['roadworks'])
 def roadworks(message):
-    headers = {"AccountKey": "p34dHcCaTsmmlz4DPlzUGw=="}
+    headers = {"AccountKey": ".....EnterYourTelegramAccKey....."}
     response = requests.get('http://datamall2.mytransport.sg/ltaodataservice/TrafficIncidents', headers=headers)
     data = response.json()['value']
 
